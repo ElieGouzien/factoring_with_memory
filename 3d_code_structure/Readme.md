@@ -26,3 +26,6 @@ Manifest:
   * `tetrahedron_3_bis.scad` : n=3 tetrahedron is sliced orthogonally to two large faces, as presented in the article (each slice is between two consecutive plans with $x+z$ constant integer).
     It corresponds to `debitage=2` in the resource evaluation code.
   * `tetrahedron_3_ter.scad` : n=3 tetrahedron is sliced orthogonally to two large faces, in another way than in the article (each slice is between two consecutive plans with $y+z$ constant integer).
+
+One STL file generated from the OpenSCAD files have been included into the `stl_files/` folder (others can be generated).
+Be careful that it does not show the colors, neither of the vertices, neither for showing the different slices.
