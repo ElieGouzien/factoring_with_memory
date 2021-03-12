@@ -2,7 +2,7 @@ use <lattice.scad>;
 
 // Check if a vertex is adjacent to the central layer (that sets the size of processor).
 // n as n_code in article (starts at 1).
-function central_layer(x, z, n) = ((x+z == n-2) || (x+z == n-1)) ? true : false;
+function central_layer(x, y, z, n) = ((x+z == n-2) || (x+z == n-1)) ? true : false;
 
 // Elementary tetrahedron as described in Equation (18) of arXiv:1311.0879.
 // x, y, z : coordinates of vector x in arXiv:1311.0879
@@ -13,7 +13,7 @@ function central_layer(x, z, n) = ((x+z == n-2) || (x+z == n-1)) ? true : false;
 //          2 : (a, b, c) = (j, i, k)
 //          3 : (a, b, c) = (j, k, i)
 //          4 : (a, b, c) = (k, i, j)
-//          5 : (a, b, c) = (j, j, i)
+//          5 : (a, b, c) = (k, j, i)
 // n : we keep only tetrahedron included in the code structure indexed by n.
 //     n is as in Equation (19) of arXiv:1311.0879 (starts at 1).
 //     use -1 for no filter
@@ -47,12 +47,12 @@ function central_layer(x, z, n) = ((x+z == n-2) || (x+z == n-1)) ? true : false;
          && filtre(x4, y4, z4, n)
      )) {
          // echo(x, y, z, s, permut, n);
-         if (central_layer(x1, z1, n)
-             && central_layer(x2, z2, n)
-             && central_layer(x3, z3, n)
-             && central_layer(x4, z4, n))
+         if (central_layer(x1, y1, z1, n)
+             && central_layer(x2, y2, z2, n)
+             && central_layer(x3, y3, z3, n)
+             && central_layer(x4, y4, z4, n))
             {
-             echo("One central tetraedron");
+             echo("One central tetraedron");  // For counting
              color("red")
              polyhedron(
                  points=[[x1,y1,z1], [x2,y2,z2], [x3,y3,z3], [x4,y4,z4]],

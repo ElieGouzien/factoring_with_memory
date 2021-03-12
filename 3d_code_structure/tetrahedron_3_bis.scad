@@ -1,11 +1,11 @@
 use <lattice.scad>;
 use <3d_tetrahedres.scad>;
 
-// layer 1 : 2 qubit
+// Layer 1 : 2 qubit
 color("black") tetraedre(-1, 0, 0, -1, 0, 3);
 color("black") tetraedre(-1, 0, 0, 1, 1, 3);
 
-// layer 2 : 14 qubit
+// Layer 2 : 14 qubit
 color("Chartreuse") tetraedre(0, 1, 0, -1, 0, 3);
 color("Chartreuse") tetraedre(0, 0, 0, 1, 2, 3);
 color("Chartreuse") tetraedre(0, 0, 0, 1, 4, 3);
@@ -21,7 +21,7 @@ color("Chartreuse") tetraedre(0, 1, 0, 1, 1, 3);
 color("Chartreuse") tetraedre(0, 1, 0, 1, 4, 3);
 color("Chartreuse") tetraedre(-1, 1, 1, 1, 1, 3);
 
-// layer 3 : 33 qubits
+// Layer 3 : 33 qubits
     // first set : 10 qubits
     color("Magenta") tetraedre(0, 0, 1, -1, 1, 3);
     color("Magenta") tetraedre(1, 1, 0, 1, 2, 3);
@@ -62,7 +62,7 @@ color("Chartreuse") tetraedre(-1, 1, 1, 1, 1, 3);
     color("Magenta") tetraedre(0, 2, 1, -1, 5, 3);
 
 
-// layer 4 : 14 qubits
+// Layer 4 : 14 qubits
 color("Cyan") tetraedre(1, 0, 1, 1, 2, 3);
 color("Cyan") tetraedre(1, 0, 1, 1, 4, 3);
 color("Cyan") tetraedre(1, 0, 1, 1, 3, 3);
@@ -78,7 +78,7 @@ color("Cyan") tetraedre(1, 1, 1, -1, 4, 3);
 color("Cyan") tetraedre(0, 1, 2, -1, 0, 3);
 color("Cyan") tetraedre(0, 1, 2, -1, 1, 3);
 
-//// layer 5 : 2 qubits
+// Layer 5 : 2 qubits
 color("Orange") tetraedre(1, 0, 2, -1, 0, 3);
 color("Orange") tetraedre(1, 0, 2, -1, 1, 3);
 
