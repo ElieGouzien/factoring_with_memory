@@ -41,12 +41,11 @@ Parameters:
     pp : error probability on physical gates (inc. identity)
 """
 
-Params = namedtuple('Param', 'type, algo, low_level')
-Params.__doc__ = """'Param(type, algo, low_level)'
+Params = namedtuple('Params', 'type, algo, low_level')
+Params.__doc__ = """'Params(type, algo, low_level)'
 
 Parameters:
-    type      : type of error correction : 'surface', '3dcolor', '3dsurface'
-                or None
+    type      : type of error correction : '3dcolor' or None
     algo      : algorithm options, type AlgoOpts
     low_level : low level options, type LowLevelOpts
 """
