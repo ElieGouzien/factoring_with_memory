@@ -5,7 +5,7 @@ Computes resources for RSA integer factorization with a memory.
 
 @author: Élie Gouzien
 """
-from math import ceil, isnan
+from math import ceil, isnan, isinf
 from itertools import product
 
 from tools import AlgoOpts, LowLevelOpts, Params, PhysicalCost
@@ -133,7 +133,7 @@ def find_best_params(base_params: Params, biais=1, **kwargs):
 def unit_format(num, unit, unicode=False):
     """Assemble number and unit, eventually converting it into LaTeX."""
     space = chr(8239)
-    num = str(round(num))
+    num = str(round(num)) if not isinf(num) else "∞" if unicode else r"\infty"
     if not unicode:
         unit = {"µs": r"\micro\second",
                 "ms": r"\milli\second",
